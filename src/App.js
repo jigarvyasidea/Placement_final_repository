@@ -1,23 +1,17 @@
-import Header from "./components/Header";
-import Blogs from "./components/Blogs";
-import Pagination from "./components/Pagination";
-import { useContext, useEffect } from "react";
-import { AppContext } from "./context/AppContext";
-import "./App.css"
+import React from 'react';
+import {BrowserRouter as Router , Route , Routes} from "react-router-dom";
+import Home from "./componts/Home";
 
-export default function App() {
-  const {fetchBlogPosts} = useContext(AppContext);
 
-  useEffect(() => {
-    fetchBlogPosts();
-  },[]);
-
+function App() {
   return (
-    <div className="w-full h-full flex flex-col gap-y-1 justify-center items-center">
-      <Header />
-      <Blogs />
-      <Pagination />
-    </div>
+    <Router>
+      <Routes>
+        <Route  path='/' element={<Home/>}/>
+        <Route  path='/' element={<Home/>}/>
+      </Routes>
+    </Router>
   );
-
 }
+
+export default App;
