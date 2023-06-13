@@ -39,10 +39,10 @@ let obj = {
     },
     Bulao : function(){
         console.log("jigar ko bulao");
-    }
+    },
 }
 
 
 console.log(obj.total());
-console.log(obj.bulao());
+console.log(obj.Bulao());
 
